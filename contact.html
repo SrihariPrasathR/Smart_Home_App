@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Smart Home Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🏠 SmartHome</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Contact Us</h1>
+                <p>We're here to help you make your home smarter</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-form-section">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions about our smart home solutions? We'd love to hear from you.</p>
+
+                    <form id="contactForm" action="#" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactFirstName">First Name</label>
+                                <input type="text" id="contactFirstName" name="firstName" required>
+                                <span class="error-message" id="contactFirstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactLastName">Last Name</label>
+                                <input type="text" id="contactLastName" name="lastName" required>
+                                <span class="error-message" id="contactLastNameError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                            <span class="error-message" id="contactEmailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="support">Technical Support</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+                            <span class="error-message" id="contactMessageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-section">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>support@smarthome.com</p>
+                                <p>sales@smarthome.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <p>Mon-Fri 9AM-6PM EST</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h4>Address</h4>
+                                <p>123 Smart Street<br>Tech City, TC 12345<br>United States</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">💬</div>
+                            <div class="info-content">
+                                <h4>Live Chat</h4>
+                                <p>Available 24/7</p>
+                                <button class="btn btn-secondary" onclick="startLiveChat()">Start Chat</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="office-hours">
+                        <h3>Office Hours</h3>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span class="day">Monday - Friday</span>
+                                <span class="time">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span class="day">Saturday</span>
+                                <span class="time">10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span class="day">Sunday</span>
+                                <span class="time">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I get started with SmartHome?</h3>
+                    <p>Simply sign up for an account and you'll be guided through the setup process. Our team is available to help if you need assistance.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is my data secure?</h3>
+                    <p>Yes, we use enterprise-grade encryption and security measures to protect your data. Your privacy is our top priority.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What devices are compatible?</h3>
+                    <p>We support a wide range of smart devices from major manufacturers. Check our compatibility list for details.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How much does it cost?</h3>
+                    <p>Our basic plan starts at $9.99/month. Enterprise solutions are available for larger installations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏠 SmartHome</h3>
+                    <p>Making smart homes accessible to everyone</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmartHome Dashboard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

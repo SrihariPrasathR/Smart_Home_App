@@ -3,25 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home App</title>
+    <title>Smart Home Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Smart Home Control Center</h1>
-        </header>
-        <main>
-            <div class="dashboard">
-                <h2>Smart Home Dashboard</h2>
-                <p>Welcome to your smart home application!</p>
-                <div class="controls">
-                    <h3>Home Controls</h3>
-                    <p>Smart home features will be implemented here.</p>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🏠 SmartHome</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero smart-home-bg">
+        <div class="particles">
+            <div class="particle" style="left: 10%; width: 4px; height: 4px;"></div>
+            <div class="particle" style="left: 20%; width: 6px; height: 6px;"></div>
+            <div class="particle" style="left: 70%; width: 3px; height: 3px;"></div>
+            <div class="particle" style="left: 80%; width: 5px; height: 5px;"></div>
+            <div class="particle" style="left: 90%; width: 4px; height: 4px;"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content fade-in-scale">
+                <h1 class="gradient-text">Welcome to Your Smart Home</h1>
+                <p>Control and monitor your entire home from one beautiful dashboard</p>
+                <div class="hero-buttons">
+                    <a href="signup.html" class="btn btn-primary glow-effect">Get Started</a>
+                    <a href="#features" class="btn btn-secondary shimmer">Learn More</a>
                 </div>
             </div>
-        </main>
-    </div>
-    <script src="js/app.js"></script>
+            <div class="hero-image">
+                <div class="smart-device glass-effect hover-lift">
+                    <div class="device-screen">
+                        <div class="room-status">
+                            <div class="room living-room active pulse-animation">
+                                <span class="room-icon">🛋️</span>
+                                <span class="room-name">Living Room</span>
+                                <span class="temp">72°F</span>
+                            </div>
+                            <div class="room bedroom hover-scale">
+                                <span class="room-icon">🛏️</span>
+                                <span class="room-name">Bedroom</span>
+                                <span class="temp">68°F</span>
+                            </div>
+                            <div class="room kitchen hover-scale">
+                                <span class="room-icon">👨‍🍳</span>
+                                <span class="room-name">Kitchen</span>
+                                <span class="temp">75°F</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="gradient-text">Smart Home Features</h2>
+            <div class="features-grid">
+                <div class="feature-card glass-effect hover-lift">
+                    <div class="feature-icon bounce-in">💡</div>
+                    <h3>Lighting Control</h3>
+                    <p>Control all your lights with voice commands or app</p>
+                    <button class="feature-btn glow-effect" onclick="toggleLights()">Toggle Lights</button>
+                </div>
+                <div class="feature-card glass-effect hover-lift">
+                    <div class="feature-icon bounce-in" style="animation-delay: 0.1s;">🌡️</div>
+                    <h3>Climate Control</h3>
+                    <p>Monitor and adjust temperature in every room</p>
+                    <button class="feature-btn glow-effect" onclick="adjustTemp()">Adjust Temperature</button>
+                </div>
+                <div class="feature-card glass-effect hover-lift">
+                    <div class="feature-icon bounce-in" style="animation-delay: 0.2s;">🔒</div>
+                    <h3>Security System</h3>
+                    <p>Keep your home safe with smart locks and cameras</p>
+                    <button class="feature-btn glow-effect" onclick="toggleSecurity()">Arm Security</button>
+                </div>
+                <div class="feature-card glass-effect hover-lift">
+                    <div class="feature-icon bounce-in" style="animation-delay: 0.3s;">🎵</div>
+                    <h3>Entertainment</h3>
+                    <p>Control your music and entertainment systems</p>
+                    <button class="feature-btn glow-effect" onclick="playMusic()">Play Music</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <h2>Home Status</h2>
+            <div class="status-grid">
+                <div class="status-card">
+                    <h3>Energy Usage</h3>
+                    <div class="energy-meter">
+                        <div class="energy-bar" style="width: 65%"></div>
+                    </div>
+                    <p>65% of daily limit</p>
+                </div>
+                <div class="status-card">
+                    <h3>Devices Online</h3>
+                    <div class="device-count">
+                        <span class="count">12/15</span>
+                        <p>devices connected</p>
+                    </div>
+                </div>
+                <div class="status-card">
+                    <h3>Security Status</h3>
+                    <div class="security-status secure">
+                        <span>🔒 Secure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏠 SmartHome</h3>
+                    <p>Making smart homes accessible to everyone</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmartHome Dashboard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
